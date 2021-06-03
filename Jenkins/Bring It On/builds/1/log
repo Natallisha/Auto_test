@@ -1,0 +1,39 @@
+Started by user [8mha:////4NiWnUTxqSTjjoiMbWDuPJVTPZKsK7m4QQY1CYlAIwDIAAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyBEgY+/dLi1CL9vMSSxJyczEQARwqsWMMAAAA=[0mNatallia Ivanova
+Running as SYSTEM
+Building in workspace C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\Bring It On
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/Natallisha/helloci.git
+ > git.exe init C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\Bring It On # timeout=10
+Fetching upstream changes from https://github.com/Natallisha/helloci.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.29.2.windows.2'
+ > git.exe fetch --tags --force --progress -- https://github.com/Natallisha/helloci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/Natallisha/helloci.git # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision 904af05dec9a5818276ac39c6faf97fe5a5e13ba (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 904af05dec9a5818276ac39c6faf97fe5a5e13ba # timeout=10
+Commit message: "Merge pull request #15 from Molnix888/dotnet-update"
+First time build. Skipping changelog.
+[Bring It On] $ cmd.exe /C "c:\apache-maven-3.8.1\bin\mvn.cmd test && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.192 s
+[INFO] Finished at: 2021-05-06T10:29:03+03:00
+[INFO] ------------------------------------------------------------------------
+[8mha:////4CjY7qJUZW+Cu/5v4xkJE5d3hVmJB9igVf+h0siMjFqhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] The goal you specified requires a project to execute but there is no POM in this directory (C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\Bring It On). Please verify you invoked Maven from the correct directory. -> [Help 1]
+[8mha:////4CjY7qJUZW+Cu/5v4xkJE5d3hVmJB9igVf+h0siMjFqhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4CjY7qJUZW+Cu/5v4xkJE5d3hVmJB9igVf+h0siMjFqhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[8mha:////4CjY7qJUZW+Cu/5v4xkJE5d3hVmJB9igVf+h0siMjFqhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[8mha:////4CjY7qJUZW+Cu/5v4xkJE5d3hVmJB9igVf+h0siMjFqhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] 
+[8mha:////4CjY7qJUZW+Cu/5v4xkJE5d3hVmJB9igVf+h0siMjFqhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[8mha:////4CjY7qJUZW+Cu/5v4xkJE5d3hVmJB9igVf+h0siMjFqhAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException
+Build step 'Вызвать цели Maven верхнего уровня  ' marked build as failure
+Archiving artifacts
+Finished: FAILURE
