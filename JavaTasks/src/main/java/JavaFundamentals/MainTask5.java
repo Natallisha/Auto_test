@@ -11,7 +11,7 @@ public class MainTask5 {
         int inputNumber = in.nextInt();
 
         if (inputNumber <13 & inputNumber >0){
-            System.out.println(month[inputNumber -1]);
+            System.out.println("The " + inputNumber + " month is " + month[inputNumber -1]);
         }
         else {
             System.out.println("Incorrect number of month");
