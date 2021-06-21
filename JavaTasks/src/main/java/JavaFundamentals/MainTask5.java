@@ -10,7 +10,7 @@ public class MainTask5 {
         System.out.println("Input number of month: ");
         int inputNumber = in.nextInt();
 
-        if (inputNumber <13 & inputNumber !=0){
+        if (inputNumber <13 & inputNumber >0){
             System.out.println(month[inputNumber -1]);
         }
         else {

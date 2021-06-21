@@ -1,12 +1,7 @@
-import Planes.ExperimentalPlane;
-import models.ClassificationLevel;
-import models.ExperimentalTypes;
-import models.MilitaryType;
+import Planes.*;
+import models.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import Planes.MilitaryPlane;
-import Planes.PassengerPlane;
-import Planes.Plane;
 
 import java.util.Arrays;
 import java.util.List;
@@ -36,21 +31,24 @@ public class AirportTest {
     private boolean assertTypeEqualityTransportPlane(Enum PlaneType) {
         Airport airport = new Airport(planes);
         List<MilitaryPlane> transportMilitaryPlanes = airport.getTransportMilitaryPlanes();
-        boolean flag = false;
+        int count = 0;
         for (MilitaryPlane militaryPlane: transportMilitaryPlanes) {
-            flag = ((militaryPlane.getType().equals(PlaneType)));
+            if ((militaryPlane.getType().equals(PlaneType))) count++;
         }
-        return flag;
+        if (count == transportMilitaryPlanes.size()) return true;
+        else return false;
+
     }
 
     private boolean assertTypeEqualityBomberPlane(Enum PlaneType) {
         Airport airport = new Airport(planes);
         List<MilitaryPlane> transportBomberPlanes = airport.getBomberMilitaryPlanes();
-        boolean flag = false;
+        int count = 0;
         for (MilitaryPlane militaryPlane: transportBomberPlanes) {
-            flag = ((militaryPlane.getType().equals(PlaneType)));
+            if ((militaryPlane.getType().equals(PlaneType))) count++;
         }
-        return flag;
+        if (count >0) return true;
+        else return false;
     }
 
 

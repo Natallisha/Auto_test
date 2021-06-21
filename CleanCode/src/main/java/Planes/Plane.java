@@ -2,7 +2,8 @@ package Planes;
 import java.util.Objects;
 
 abstract public class Plane {
-    String model;
+
+    public String model;
     private int maxSpeed;
     private int maxFlightDistance;
     private int maxLoadCapacity;
@@ -12,10 +13,6 @@ abstract public class Plane {
         this.maxSpeed = maxSpeed;
         this.maxFlightDistance = maxFlightDistance;
         this.maxLoadCapacity = maxLoadCapacity;
-    }
-
-    public String getModel() {
-        return model;
     }
 
     public int getMaxSpeed() {
@@ -28,16 +25,6 @@ abstract public class Plane {
 
     public int getMinLoadCapacity() {
         return maxLoadCapacity;
-    }
-
-    @Override
-    public String toString() {
-        return "Plane{" +
-                "model='" + model + '\'' +
-                ", maxSpeed=" + maxSpeed +
-                ", maxFlightDistance=" + maxFlightDistance +
-                ", maxLoadCapacity=" + maxLoadCapacity +
-                '}';
     }
 
     @Override
@@ -56,4 +43,13 @@ abstract public class Plane {
         return Objects.hash(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
     }
 
+    @Override
+    public String toString() {
+        return "Plane{" +
+                "model='" + model + '\'' +
+                ", maxSpeed=" + maxSpeed +
+                ", maxFlightDistance=" + maxFlightDistance +
+                ", maxLoadCapacity=" + maxLoadCapacity +
+                '}';
+    }
 }

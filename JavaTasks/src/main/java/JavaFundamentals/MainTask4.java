@@ -10,8 +10,8 @@ public class MainTask4 {
                 multi *= Integer.parseInt(args[i]);
             }
 
-        System.out.println(sum);
-        System.out.println(multi);
+        System.out.println("The sum of arguments = " + sum);
+        System.out.println("The result of multiply arguments = " + multi);
     }
     }
 

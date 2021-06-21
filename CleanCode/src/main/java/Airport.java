@@ -1,14 +1,18 @@
-import Planes.ExperimentalPlane;
+import Planes.*;
 import models.MilitaryType;
-import Planes.MilitaryPlane;
-import Planes.PassengerPlane;
-import Planes.Plane;
-
 import java.util.*;
 
 public class Airport {
+
     private List<? extends Plane> planes;
 
+    public Airport(List<? extends Plane> planes) {
+        this.planes = planes;
+    }
+
+    public List<? extends Plane> getPlanes() {
+        return planes;
+    }
 
     public List<PassengerPlane> getPassengerPlanes() {
         List<PassengerPlane> passengerPlanes = new ArrayList<>();
@@ -42,7 +46,7 @@ public class Airport {
         for (MilitaryPlane plane : militaryPlanes) {
             if (plane.getType() == MilitaryType.TRANSPORT) transportMilitaryPlanes.add(plane);
         }
-    return transportMilitaryPlanes;
+        return transportMilitaryPlanes;
     }
 
     public List<MilitaryPlane> getBomberMilitaryPlanes() {
@@ -63,7 +67,6 @@ public class Airport {
     }
 
     public Airport sortByMaxDistance() {
-
         Collections.sort(planes, (Comparator<Plane>) (o1, o2)-> o1.getMaxFlightDistance() - o2.getMaxFlightDistance());
         return this;
     }
@@ -78,25 +81,10 @@ public class Airport {
         return this;
     }
 
-    public List<? extends Plane> getPlanes() {
-        return planes;
-    }
-
-    private void print(Collection<? extends Plane> collection) {
-        for (Plane plane : collection) {
-            System.out.println(plane);
-        }
-    }
-
     @Override
     public String toString() {
         return "Airport{" +
                 "Planes=" + planes.toString() +
                 '}';
     }
-
-    public Airport(List<? extends Plane> planes) {
-        this.planes = planes;
-    }
-
 }
