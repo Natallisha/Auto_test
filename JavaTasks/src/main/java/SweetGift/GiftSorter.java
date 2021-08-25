@@ -1,46 +1,53 @@
 package SweetGift;
-import SweetGift.KindsOfSweets.*;
-import SweetGift.TypeOfSweets.*;
-import java.util.*;
+
+import SweetGift.KindsOfSweets.Candy;
+import SweetGift.KindsOfSweets.Chocolate;
+import SweetGift.KindsOfSweets.Cookie;
+import SweetGift.TypeOfSweets.CandyType;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class GiftSorter {
     private final List<? extends Sweet> sweets;
 
 
-    public Double GetTotalWeightOfTheGift(){
+    public Double GetTotalWeightOfTheGift() {
         double totalWeight = 0.0;
-        for (Sweet sweet: sweets){
-            totalWeight += sweet.weightOfOne*sweet.quantity;
+        for (Sweet sweet : sweets) {
+            totalWeight += sweet.weightOfOne * sweet.quantity;
         }
         return totalWeight;
     }
 
-    public Double GetWeightOfCandies(){
+    public Double GetWeightOfCandies() {
         double weightOfCandies = 0.0;
-        for (Sweet sweet :sweets){
-            if(sweet instanceof Candy) weightOfCandies += sweet.weightOfOne*sweet.quantity;
+        for (Sweet sweet : sweets) {
+            if (sweet instanceof Candy) weightOfCandies += sweet.weightOfOne * sweet.quantity;
         }
         return weightOfCandies;
     }
 
-    public Double GetWeightOfCookies(){
+    public Double GetWeightOfCookies() {
         double weightOfCookies = 0.0;
-        for (Sweet sweet :sweets){
-            if(sweet instanceof Cookie) weightOfCookies += sweet.weightOfOne*sweet.quantity;
+        for (Sweet sweet : sweets) {
+            if (sweet instanceof Cookie) weightOfCookies += sweet.weightOfOne * sweet.quantity;
         }
         return weightOfCookies;
     }
 
-    public Double GetWeightOfChocolate(){
+    public Double GetWeightOfChocolate() {
         double weightOfChocolate = 0.0;
-        for (Sweet sweet :sweets){
-            if(sweet instanceof Candy) weightOfChocolate += sweet.weightOfOne*sweet.quantity;
+        for (Sweet sweet : sweets) {
+            if (sweet instanceof Candy) weightOfChocolate += sweet.weightOfOne * sweet.quantity;
         }
         return weightOfChocolate;
     }
 
-    public GiftSorter SortByPercentOfSugar(){
-        Collections.sort(sweets, (Comparator<Sweet>) (o1, o2) -> o1.getPercentOfSugar() - o2.getPercentOfSugar() );
+    public GiftSorter SortByPercentOfSugar() {
+        Collections.sort(sweets, (Comparator<Sweet>) (o1, o2) -> o1.getPercentOfSugar() - o2.getPercentOfSugar());
         return this;
     }
 
@@ -49,63 +56,63 @@ public class GiftSorter {
         return this;
     }
 
-    public GiftSorter SortByCalories(){
-        Collections.sort(sweets, (Comparator<Sweet>) (o1, o2) -> Double.compare(o1.getCalories() ,o2.getCalories()));
+    public GiftSorter SortByCalories() {
+        Collections.sort(sweets, (Comparator<Sweet>) (o1, o2) -> Double.compare(o1.getCalories(), o2.getCalories()));
         return this;
     }
 
-    public GiftSorter SortByQuantity(){
-        Collections.sort(sweets, (Comparator<Sweet>) (o1, o2)-> o1.getQuantity() - o2.getQuantity());
+    public GiftSorter SortByQuantity() {
+        Collections.sort(sweets, (Comparator<Sweet>) (o1, o2) -> o1.getQuantity() - o2.getQuantity());
         return this;
     }
 
-    public List<Candy> ShowOnlyCandies(){
-        List <Candy> onlyCandies = new ArrayList<>();
-        for (Sweet sweet: sweets) {
+    public List<Candy> ShowOnlyCandies() {
+        List<Candy> onlyCandies = new ArrayList<>();
+        for (Sweet sweet : sweets) {
             if (sweet instanceof Candy) onlyCandies.add((Candy) sweet);
         }
         return onlyCandies;
     }
 
-    public List<Cookie> ShowOnlyCookies(){
+    public List<Cookie> ShowOnlyCookies() {
         List<Cookie> onlyCookies = new ArrayList<>();
-        for (Sweet sweet: sweets){
+        for (Sweet sweet : sweets) {
             if (sweet instanceof Cookie) onlyCookies.add((Cookie) sweet);
         }
 
         return onlyCookies;
     }
 
-    public List<Chocolate> ShowOnlyChocolate(){
+    public List<Chocolate> ShowOnlyChocolate() {
         List<Chocolate> onlyChocolate = new ArrayList<>();
-        for (Sweet sweet: sweets){
+        for (Sweet sweet : sweets) {
             if (sweet instanceof Chocolate) onlyChocolate.add((Chocolate) sweet);
         }
 
         return onlyChocolate;
     }
 
-    public List<Chocolate> ShowChocolateWithPercentOfCocoaMoreTheGiven(int current){
+    public List<Chocolate> ShowChocolateWithPercentOfCocoaMoreTheGiven(int current) {
         List<Chocolate> onlyChocolate = ShowOnlyChocolate();
         List<Chocolate> sortedByCocoaChocolate = new ArrayList<>();
-        for (Chocolate chocolate: onlyChocolate){
-            if (chocolate.getPercentOfCocoa()> current) sortedByCocoaChocolate.add(chocolate);
-            }
-        return sortedByCocoaChocolate;
+        for (Chocolate chocolate : onlyChocolate) {
+            if (chocolate.getPercentOfCocoa() > current) sortedByCocoaChocolate.add(chocolate);
         }
+        return sortedByCocoaChocolate;
+    }
 
-    public List<Sweet> ShowSweetsWithCaloriesMoreTheGiven(int current){
+    public List<Sweet> ShowSweetsWithCaloriesMoreTheGiven(int current) {
         List<Sweet> sortedByCalories = new ArrayList<>();
-        for (Sweet sweet: sweets){
+        for (Sweet sweet : sweets) {
             if (sweet.getCalories() > current) sortedByCalories.add(sweet);
         }
         return sortedByCalories;
     }
 
-    public List<Candy> ShowOnlyLollipop(){
-        List <Candy> onlyCandies = ShowOnlyCandies();
-        List <Candy> onlyLollipop = new ArrayList<>();
-        for (Candy candy: onlyCandies){
+    public List<Candy> ShowOnlyLollipop() {
+        List<Candy> onlyCandies = ShowOnlyCandies();
+        List<Candy> onlyLollipop = new ArrayList<>();
+        for (Candy candy : onlyCandies) {
             if (candy.getType() == CandyType.LOLLIPOP) onlyLollipop.add(candy);
         }
         return onlyLollipop;

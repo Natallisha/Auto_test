@@ -56,7 +56,7 @@ public class Main {
                     System.out.println("You enter the wrong number or don't enter it at all.\n");
                     break;
             }
-        }while (true);
+        } while (true);
 
     }
 }

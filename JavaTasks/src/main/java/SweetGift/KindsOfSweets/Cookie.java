@@ -21,6 +21,6 @@ public class Cookie extends Sweet {
     public String toString() {
         return super.toString().replace("}",
                 "type=" + type +
-                '}');
+                        '}');
     }
 }

@@ -12,11 +12,11 @@ public class OptionalTask6 {
         FileReader fileReader = new FileReader("src/main/java/JavaCollections/fileForOptionalTask");
         Scanner scanner = new Scanner(fileReader);
         List<String> song = new ArrayList<>();
-        while (scanner.hasNextLine()){
+        while (scanner.hasNextLine()) {
             song.add(scanner.nextLine());
         }
         fileReader.close();
-        Collections.sort(song, (o1, o2)-> o1.compareTo(o2));
+        Collections.sort(song, (o1, o2) -> o1.compareTo(o2));
         System.out.println(song);
     }
 }

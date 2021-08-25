@@ -27,7 +27,7 @@ public class Chocolate extends Sweet {
     public String toString() {
         return super.toString().replace("}",
                 "type=" + type +
-                ", percentOfCocoa=" + percentOfCocoa +
-                '}');
+                        ", percentOfCocoa=" + percentOfCocoa +
+                        '}');
     }
 }

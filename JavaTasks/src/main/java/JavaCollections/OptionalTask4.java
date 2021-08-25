@@ -18,7 +18,6 @@ package JavaCollections;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class OptionalTask4 {
@@ -30,6 +29,7 @@ public class OptionalTask4 {
             "Are ringing far and wide.\n" +
             "Nice days they are bringing\n" +
             "To people and the countryside.";
+
     public static void main(String[] args) {
 
         List<String> poem = Arrays.asList(POEM.split("\n"));

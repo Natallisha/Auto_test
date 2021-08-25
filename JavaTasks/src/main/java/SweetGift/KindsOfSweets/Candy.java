@@ -5,7 +5,7 @@ import SweetGift.TypeOfSweets.CandyType;
 
 public class Candy extends Sweet {
 
-    public Candy(String kindOfSweet, String name,  int quantity, Double weightOfOne, Double calories, int percentOfSugar,CandyType type) {
+    public Candy(String kindOfSweet, String name, int quantity, Double weightOfOne, Double calories, int percentOfSugar, CandyType type) {
         super(kindOfSweet,
                 name,
                 quantity,
@@ -17,7 +17,6 @@ public class Candy extends Sweet {
 
 
     CandyType type;
-
 
     public CandyType getType() {
         return type;
@@ -31,9 +30,8 @@ public class Candy extends Sweet {
     public String toString() {
         return super.toString().replace("}",
                 ", type=" + type +
-                "}");
+                        "}");
     }
-
 
 
 }
